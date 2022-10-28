@@ -33,7 +33,6 @@ const FilteredRegions = ({ countries, setCountries }) => {
   const handleRegionChange = (event) => {
     event.preventDefault();
 
-    console.log(123);
     setSelectedRegion(event.target.value);
   };
 
@@ -46,7 +45,6 @@ const FilteredRegions = ({ countries, setCountries }) => {
       axios
         .get(`https://restcountries.com/v2/region/${selectedRegion}`)
         .then((response) => {
-          console.log(response.data);
           setCountries(response.data);
         });
     }

@@ -71,7 +71,7 @@ const Country = () => {
               </div>
               <div className="border-countries">
                 <p className="border-countries-title">Border Countries:</p>
-                {borders?.map((border, name) => (
+                {borders?.map((border) => (
                   <Link
                     to={`/country/${name}`}
                     className="border-country"
