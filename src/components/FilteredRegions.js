@@ -59,8 +59,9 @@ const FilteredRegions = ({ countries, setCountries }) => {
   }, [selectedRegion]);
 
   return (
-    <div className="select">
+    <div>
       <select
+        className="select"
         name="select"
         id="select"
         value={regions.name}

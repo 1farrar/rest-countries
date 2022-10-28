@@ -180,6 +180,17 @@ a {
 }
 
 .select {
+  background-color: #fff;
+  font-family: inherit;
+  font-size: 16px;
+  padding: 15px 50px;
+  border-radius: 7px;
+  border: none;
+  box-shadow: rgb(0 0 0 / 3%) 0px 0px 5px 5px;
+}
+
+.select:focus {
+  outline: none;
 }
 
 .back-btn {
@@ -268,14 +279,14 @@ a {
   color: var(--text-color);
 }
 
-/* .dark a {
+.dark a {
   color: var(--text-color);
-} */
+}
 
 .dark .header-nav,
-.dark .inside-container,
+.dark .link-con,
 .dark .search-field input,
-.dark .select-region,
+.dark .select,
 .dark .region-list,
 .dark .back-btn,
 .dark .border-country {
@@ -284,7 +295,7 @@ a {
 }
 
 .dark .search-field input,
-.dark .select-region,
+.dark .select,
 .dark .region-list li,
 .dark .search-field input::placeholder,
 .dark .search-icon,
@@ -292,4 +303,32 @@ a {
 .dark .border-country,
 .dark .select-region summary:after {
   color: var(--text-color);
+}
+
+/* Mobile Screen  */
+@media screen and (max-width: 560px) {
+  .header-nav {
+    padding: 1rem;
+  }
+
+  .search {
+    align-items: initial;
+    padding: 1.5rem;
+  }
+
+  .search-field {
+    width: 20rem;
+  }
+  .countries-con {
+    grid-template-columns: 1fr;
+  }
+
+  /* .link-con {
+    width: 80%;
+  } */
+
+  .details-block {
+    flex-direction: column;
+    gap: 1.5rem;
+  }
 }

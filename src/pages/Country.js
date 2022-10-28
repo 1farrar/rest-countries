@@ -32,14 +32,15 @@ const Country = () => {
           currencies,
           languages,
           borders,
+          cioc,
           idx,
         }) => (
-          <section className="country-block" key={capital}>
+          <section className="country-block" key={cioc}>
             <img className="country-image" src={flags.png} alt={name} />
             <div className="country-block-info">
               <h2>{name}</h2>
               <div className="details-block">
-                <ul className="details-block-one" key={currencies}>
+                <ul className="details-block-one">
                   <li>
                     <span>Native Name:</span> {nativeName}
                   </li>
@@ -70,8 +71,12 @@ const Country = () => {
               </div>
               <div className="border-countries">
                 <p className="border-countries-title">Border Countries:</p>
-                {borders?.map((border) => (
-                  <Link to="" className="border-country" key={border}>
+                {borders?.map((border, name) => (
+                  <Link
+                    to={`/country/${name}`}
+                    className="border-country"
+                    key={border}
+                  >
                     {border}
                   </Link>
                 ))}

@@ -12,7 +12,6 @@ const Countries = () => {
 
   useEffect(() => {
     axios.get("https://restcountries.com/v2/all").then((response) => {
-      console.log(response);
       setCountries(response.data);
       setIsLoading(false);
     });
@@ -20,7 +19,7 @@ const Countries = () => {
 
   const handleCountrySearch = (event) => {
     event.preventDefault();
-    console.log(event.target.value);
+
     setCountrySearch(event.target.value);
     if (countrySearch) {
       setFilteredCountries(

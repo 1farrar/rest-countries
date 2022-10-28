@@ -7,7 +7,6 @@ import { useStateContext } from "./context/Context";
 
 const App = () => {
   const { theme } = useStateContext();
-  console.log(theme);
 
   return (
     <div className={theme === "dark" ? "dark" : "light"}>
